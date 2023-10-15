@@ -15,7 +15,7 @@ function App() {
 
   const handleFilter = async () => {
     try {
-      const response = await axios.post("https://searchfilter.onrender.com", {
+      const response = await axios.post("https://searchfilter.onrender.com/api/search-filter", {
         dateRange: { startDate, endDate },
         name,
         amountRange: { min: minAmount, max: maxAmount }
