@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './App.css';
 
+
 function App() {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -14,7 +15,7 @@ function App() {
 
   const handleFilter = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/api/search-filter', {
+      const response = await axios.post("https://searchfilter.onrender.com", {
         dateRange: { startDate, endDate },
         name,
         amountRange: { min: minAmount, max: maxAmount }
