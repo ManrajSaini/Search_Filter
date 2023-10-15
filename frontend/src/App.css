@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Reset some default styles and set background color */
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  /* Added padding to the app container */
+  flex-direction: column;
+  /* Stack content vertically */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-options {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  /* Added margin between filter options and results */
+}
+
+/* Updated the .filter-options styles to align input boxes in a single vertical line */
+.filter-options div {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #444;
+  /* Input background color */
+  color: #fff;
+  /* Input text color */
+  width: 100%;
+  /* Added width to fill the container */
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  /* Make the button fill the container */
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+  /* Button background color on hover */
+}
+
+.filtered-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.filtered-list {
+  flex: 1;
+  padding: 20px;
+  background-color: #222;
+  /* Result background color */
+  border-radius: 10px 10px 10px 10px;
+  list-style: none;
+  overflow-y: auto;
+  /* Add scrollbar if needed */
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* Stack result items vertically */
+}
+
+.filtered-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
